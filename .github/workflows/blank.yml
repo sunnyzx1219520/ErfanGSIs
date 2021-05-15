@@ -1,0 +1,36 @@
+# This is a basic workflow to help you get started with Actions
+
+name: flyme
+
+# Controls when the action will run. 
+on:https://ip197508572.out.azhimalayanvh.com/Firmware/Flyme/meizu17_Pro/8.2.0.0/cn/20210125153524/dd40795f/update.zip?ali_redirect_domain=firmware.meizu.com&ali_redirect_ex_ftag=8fba0da360a2e81854fc2cf7f9013ce01bdde04d2600700d&ali_redirect_ex_tmining_ts=1621042764&ali_redirect_ex_tmining_expire=3600&ali_redirect_ex_hot=100
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
